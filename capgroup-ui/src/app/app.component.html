@@ -1,0 +1,37 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  
+ 
+
+  
+  <input (keyup)="onKey($event)">
+  <p><label>Enter value and press enter</label></p><div  (mouseleave) ="mouseLeave('div A')">
+  
+  <p><label>Average value : </label>{{averageValue}}</p>
+  
+  <p>{{inputValue}}</p>  <button (click)="clear()">Clear</button>
+
+  <br><br>
+  
+
+  <ul>
+    <li *ngFor="let price of prices; let i = index">
+      {{ i + 1 }} - {{ price.name }}
+    </li>
+  </ul>
+
+  <input #box (keyup.enter)="onEnter(box.value)">
+  <p>{{value}}</p>
+
+  <li *ngFor="let element of array">
+    {{ element }}
+  </li>
+  
+  <button (click)="clearMessages()">Clear messages </button> 
+  </div>
+
+
+
